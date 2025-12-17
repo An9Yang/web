@@ -1,0 +1,54 @@
+import React from "react";
+import Link from "next/link";
+import { Mail, MapPin } from "lucide-react";
+
+export function Footer() {
+    return (
+        <footer className="bg-secondary border-t border-border pt-16 pb-8">
+            <div className="container mx-auto px-6">
+                <div className="grid md:grid-cols-4 gap-12 mb-12">
+                    <div className="col-span-1 md:col-span-2">
+                        <Link href="/" className="text-2xl font-bold tracking-tight mb-4 block">
+                            <span className="text-primary">Eamom</span>
+                            <span className="text-foreground">Voice AI</span>
+                        </Link>
+                        <p className="text-muted-foreground max-w-sm">
+                            Reinventing restaurant communication with AI. Boundless service for the modern dining experience.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 className="font-bold mb-4">Product</h4>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li><Link href="#product" className="hover:text-primary">Features</Link></li>
+                            <li><Link href="#roi" className="hover:text-primary">Pricing & ROI</Link></li>
+                            <li><Link href="#how-it-works" className="hover:text-primary">Integration</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="font-bold mb-4">Contact</h4>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                                <Mail className="w-4 h-4" />
+                                <a href="mailto:hello@eamom.com" className="hover:text-primary">hello@eamom.com</a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <MapPin className="w-4 h-4" />
+                                <span>San Francisco, CA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+                    <p>© 2025 Eamom Voice AI. All rights reserved.</p>
+                    <div className="flex gap-6">
+                        <Link href="#" className="hover:text-foreground">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-foreground">Terms of Service</Link>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
