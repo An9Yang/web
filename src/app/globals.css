@@ -23,48 +23,52 @@
 }
 
 :root {
-  /* Light SaaS Theme adapted from iorderai2 */
+  /* Monochrome / Slate Theme (User Requested) */
 
   /* Backgrounds */
-  --background: #F8FAFC;
-  /* Slate 50 - Very light, airy */
-  --foreground: #0F172A;
-  /* Slate 900 */
+  --background: #f5f5f5;
+  /* User: bg-page */
+  --foreground: #1a1a1a;
+  /* User: text-primary */
 
-  /* Primary: Teal #1E6C7E - The core brand color */
-  --primary: #1E6C7E;
+  /* Primary: Near Black #1a1a1a */
+  --primary: #1a1a1a;
   --primary-foreground: #ffffff;
 
-  /* Secondary: Soft Gold #E6B000 - Used sparingly for warmth */
-  --secondary: #E6B000;
+  /* Secondary: Dark Grey #545454 */
+  --secondary: #545454;
   --secondary-foreground: #ffffff;
 
   /* Muted / Neutral */
-  --muted: #F1F5F9;
-  /* Slate 100 */
-  --muted-foreground: #64748B;
-  /* Slate 500 */
+  --muted: #f8f8f8;
+  /* User: bg-section */
+  --muted-foreground: #757575;
+  /* User: text-muted */
 
-  /* Accent */
-  --accent: #E2E8F0;
-  /* Slate 200 */
-  --accent-foreground: #0F172A;
+  /* Accent (Hover states) */
+  --accent: #e8e8e8;
+  /* User: bg-hover */
+  --accent-foreground: #1a1a1a;
 
-  /* Destructive - Keep for errors but use sparingly */
-  --destructive: #DC2626;
-  --destructive-foreground: #fafafa;
+  /* Destructive */
+  --destructive: #e53e3e;
+  /* User: error */
+  --destructive-foreground: #ffffff;
 
   /* Borders & Inputs */
-  --border: #CBD5E1;
-  /* Slate 300 */
-  --input: #CBD5E1;
-  --ring: #1E6C7E;
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #1a1a1a;
 
   --radius: 0.5rem;
 
-  /* Custom Gradients - Refined to be "Airy" */
-  /* A more subtle Cyan -> Soft Turquoise -> Gold hint */
-  --gradient-primary: linear-gradient(135deg, #1E6C7E 0%, #2D8CA4 50%, #D4A017 100%);
+  /* Custom Gradients - Sleek Monochrome */
+  /* Black -> Charcoal */
+  --gradient-primary: linear-gradient(135deg, #1a1a1a 0%, #404040 100%);
+
+  /* Additional User Variables (mapped for reference if needed in custom classes) */
+  --color-success-text: #166534;
+  --color-warning: #f59e0b;
 }
 
 body {
