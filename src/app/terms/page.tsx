@@ -1,9 +1,13 @@
 import React from "react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export default function TermsAndConditions() {
     return (
-        <main className="min-h-screen pt-32 pb-20 px-6 bg-background">
-            <div className="container mx-auto max-w-4xl">
+        <>
+            <Header />
+            <main className="min-h-screen pt-32 pb-20 px-6 bg-background">
+                <div className="container mx-auto max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-8 text-foreground tracking-tight">Terms and Conditions</h1>
                 <p className="text-muted-foreground mb-12 text-lg">Last Updated: December 2025</p>
 
@@ -135,7 +139,9 @@ export default function TermsAndConditions() {
                         <p>If you have any questions about these Terms, please contact us at: <strong>support@iorderai.com</strong></p>
                     </section>
                 </div>
-            </div>
-        </main>
+                </div>
+            </main>
+            <Footer />
+        </>
     );
 }

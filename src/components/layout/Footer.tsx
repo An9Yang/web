@@ -44,7 +44,7 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li className="flex items-center gap-2">
                                 <Mail className="w-4 h-4" />
-                                <a href="mailto:hello@iorderai.com" className="hover:text-primary">hello@iorderai.com</a>
+                                <a href="mailto:support@iorderai.com" className="hover:text-primary">support@iorderai.com</a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-4 h-4" />
