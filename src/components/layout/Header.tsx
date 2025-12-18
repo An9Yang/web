@@ -43,13 +43,13 @@ export function Header() {
                             Actually, Next Image is standard. */}
                         <img
                             src="/logo.png"
-                            alt="Eamom Logo"
+                            alt="iOrderAI Logo"
                             className="w-full h-full object-contain"
                         />
                     </div>
                     <div className="flex flex-col">
                         <span className="text-lg md:text-xl font-bold tracking-tight text-slate-900 leading-none group-hover:text-primary transition-colors">
-                            Eamom
+                            iOrderAI
                         </span>
                         <span className="text-[10px] font-medium tracking-widest uppercase text-slate-500 leading-none">
                             Voice AI

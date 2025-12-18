@@ -12,13 +12,13 @@ export function Footer() {
                             <div className="relative w-8 h-8 md:w-10 md:h-10">
                                 <img
                                     src="/logo.png"
-                                    alt="Eamom Logo"
+                                    alt="iOrderAI Logo"
                                     className="w-full h-full object-contain"
                                 />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-lg md:text-xl font-bold tracking-tight text-slate-900 leading-none group-hover:text-primary transition-colors">
-                                    Eamom
+                                    iOrderAI
                                 </span>
                                 <span className="text-[10px] font-medium tracking-widest uppercase text-slate-500 leading-none">
                                     Voice AI
@@ -44,21 +44,21 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li className="flex items-center gap-2">
                                 <Mail className="w-4 h-4" />
-                                <a href="mailto:hello@eamom.com" className="hover:text-primary">hello@eamom.com</a>
+                                <a href="mailto:hello@iorderai.com" className="hover:text-primary">hello@iorderai.com</a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-4 h-4" />
-                                <span>San Francisco, CA</span>
+                                <span className="text-slate-500">San Francisco, CA</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-                    <p>© 2025 Eamom Voice AI. All rights reserved.</p>
+                    <p>© 2025 iOrderAI. All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link href="#" className="hover:text-foreground">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-foreground">Terms of Service</Link>
+                        <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-foreground">Terms of Service</Link>
                     </div>
                 </div>
             </div>

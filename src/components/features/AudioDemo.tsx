@@ -143,7 +143,7 @@ export function AudioDemo() {
                                         )}
                                     >
                                         <div className={cn("text-[10px] font-bold opacity-70 mb-1 uppercase mb-2", line.role === "ai" ? "text-primary-foreground" : "text-slate-500")}>
-                                            {line.role === "ai" ? "Eamom AI" : "Customer"}
+                                            {line.role === "ai" ? "iOrderAI" : "Customer"}
                                         </div>
                                         {line.text}
                                     </motion.div>

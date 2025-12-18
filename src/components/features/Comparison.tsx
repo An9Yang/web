@@ -63,7 +63,7 @@ export function Comparison() {
                         <div className="absolute -top-4 right-8 bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg flex items-center gap-2">
                             <Zap className="w-3 h-3 fill-current" /> Recommended
                         </div>
-                        <h3 className="text-2xl font-bold mb-1 text-foreground">Eamom Voice AI</h3>
+                        <h3 className="text-2xl font-bold mb-1 text-foreground">iOrderAI Voice AI</h3>
                         <div className="text-4xl font-bold mb-8 text-primary">$1,200 <span className="text-sm font-normal text-muted-foreground">/ month</span></div>
 
                         <ul className="space-y-5">

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Eamom Voice AI - Automate Your Restaurant Calls",
+  title: "iOrderAI Voice AI - Automate Your Restaurant Calls",
   description: "The AI Voice Assistant that saves restaurants $40k/year. Automatic order taking for Chinese & Asian restaurants.",
 };
 

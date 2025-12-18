@@ -26,7 +26,7 @@ const steps = [
     {
         id: 4,
         title: "Go Live",
-        description: "Eamom starts answering calls immediately. You focus on cooking.",
+        description: "iOrderAI starts answering calls immediately. You focus on cooking.",
         icon: <Store className="w-6 h-6" />,
     },
 ];

@@ -46,7 +46,7 @@ export function Hero() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                        Stop losing orders to busy lines. Eamom answers every call, takes orders in English & Chinese, and sends them directly to your POS.
+                        Stop losing orders to busy lines. iOrderAI answers every call, takes orders in English & Chinese, and sends them directly to your POS.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -127,7 +127,7 @@ export function Hero() {
                             </div>
                         </motion.div>
 
-                        {/* Layer 2: Eamom AI Core */}
+                        {/* Layer 2: iOrderAI Core */}
                         <motion.div
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -141,7 +141,7 @@ export function Hero() {
                                 <div className="absolute inset-0 bg-primary/5 rounded-full blur-xl animate-pulse" />
                                 <div className="absolute inset-2 bg-white border border-primary/20 rounded-full shadow-[0_8px_30px_rgba(30,108,126,0.15)] flex flex-col items-center justify-center text-primary z-10">
                                     <Bot className="w-10 h-10 mb-1 text-primary" />
-                                    <span className="text-[10px] font-bold tracking-tighter text-primary">EAMOM CORE</span>
+                                    <span className="text-[10px] font-bold tracking-tighter text-primary">iOrderAI CORE</span>
                                 </div>
 
                                 {/* Orbiting Data Particles */}

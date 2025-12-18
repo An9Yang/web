@@ -17,7 +17,7 @@ export function RoiCalculator() {
                     Calculate Your Savings
                 </h2>
                 <p className="text-muted-foreground text-center mb-12 font-light tracking-wide">
-                    See how much Eamom can add to your bottom line instantly.
+                    See how much iOrderAI can add to your bottom line instantly.
                 </p>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -25,7 +25,7 @@ export function RoiCalculator() {
                     <div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6"> Stop Paying for "Hello" </h2>
                         <p className="text-xl text-muted-foreground mb-8">
-                            A dedicated phone staff costs you $42k+/year. Eamom handles unlimited calls for a fraction of the cost, 24/7.
+                            A dedicated phone staff costs you $42k+/year. iOrderAI handles unlimited calls for a fraction of the cost, 24/7.
                         </p>
 
                         <ul className="space-y-4">
@@ -80,7 +80,7 @@ export function RoiCalculator() {
                                 <span className="font-mono text-red-500">-${(staffCount * monthlyWage * 12).toLocaleString()}</span>
                             </div>
                             <div className="flex justify-between items-center pb-4 border-b border-border">
-                                <span className="text-muted-foreground">Eamom AI Cost</span>
+                                <span className="text-muted-foreground">iOrderAI Cost</span>
                                 <span className="font-mono text-foreground">-${(aiCost * 12).toLocaleString()}</span>
                             </div>
                             <div className="flex justify-between items-center pt-2">
