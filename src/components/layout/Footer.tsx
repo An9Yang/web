@@ -8,9 +8,22 @@ export function Footer() {
             <div className="container mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-1 md:col-span-2">
-                        <Link href="/" className="text-2xl font-bold tracking-tight mb-4 block">
-                            <span className="text-primary">Eamom</span>
-                            <span className="text-foreground">Voice AI</span>
+                        <Link href="/" className="flex items-center gap-3 group mb-4">
+                            <div className="relative w-8 h-8 md:w-10 md:h-10">
+                                <img
+                                    src="/logo.png"
+                                    alt="Eamom Logo"
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-lg md:text-xl font-bold tracking-tight text-slate-900 leading-none group-hover:text-primary transition-colors">
+                                    Eamom
+                                </span>
+                                <span className="text-[10px] font-medium tracking-widest uppercase text-slate-500 leading-none">
+                                    Voice AI
+                                </span>
+                            </div>
                         </Link>
                         <p className="text-muted-foreground max-w-sm">
                             Reinventing restaurant communication with AI. Boundless service for the modern dining experience.

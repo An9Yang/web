@@ -6,7 +6,7 @@ import { AlertCircle, DollarSign, Clock, Users } from "lucide-react";
 
 export function ProblemSection() {
     return (
-        <section className="py-24 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+        <section className="py-32 bg-slate-50 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold uppercase tracking-widest mb-6">

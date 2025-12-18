@@ -35,9 +35,26 @@ export function Header() {
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-bold tracking-tight flex items-center gap-2">
-                    <span className="text-primary">Eamom</span>
-                    <span className="text-foreground">Voice AI</span>
+                {/* Logo */}
+                <Link href="/" className="flex items-center gap-3 group">
+                    <div className="relative w-8 h-8 md:w-10 md:h-10">
+                        {/* Use standard img tag for simplicity or Next Image if configured. Using img for raw speed in prototype if needed, but Next Image is better. 
+                            Since I can't verify Next Image config easily, I'll use <img /> with optimization class or standard <img /> to avoid Hydration errors if Image component is tricky with local files. 
+                            Actually, Next Image is standard. */}
+                        <img
+                            src="/logo.png"
+                            alt="Eamom Logo"
+                            className="w-full h-full object-contain"
+                        />
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-lg md:text-xl font-bold tracking-tight text-slate-900 leading-none group-hover:text-primary transition-colors">
+                            Eamom
+                        </span>
+                        <span className="text-[10px] font-medium tracking-widest uppercase text-slate-500 leading-none">
+                            Voice AI
+                        </span>
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}

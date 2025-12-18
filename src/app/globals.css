@@ -75,6 +75,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+  /* tracking-tight */
+}
+
+h1,
+h2 {
+  letter-spacing: -0.04em;
+  /* tracking-tighter for large headings */
+}
+
+p {
+  line-height: 1.75;
+  /* leading-relaxed */
+}
+
 /* Utilities for the specific design style */
 .text-gradient {
   background: var(--gradient-primary);

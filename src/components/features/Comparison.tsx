@@ -3,23 +3,41 @@
 import React from "react";
 import { Check, X, Clock, Wallet, ShieldCheck, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export function Comparison() {
     return (
-        <section className="py-24 bg-background">
+        <section className="py-32 bg-background relative">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter mb-4">
+                <div className="text-center mb-20">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-5xl font-semibold tracking-tighter mb-6"
+                    >
                         Upgrade Your Front Desk
-                    </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto font-light tracking-wide">
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-muted-foreground max-w-2xl mx-auto font-light tracking-wide text-lg"
+                    >
                         Why hire another temp when you can install a permanent expert?
-                    </p>
+                    </motion.p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
                     {/* Human Card */}
-                    <div className="rounded-3xl p-8 border border-slate-200 bg-slate-50 relative hover:shadow-lg transition-all duration-500">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="rounded-3xl p-8 border border-slate-100 bg-white relative hover:shadow-xl transition-all duration-500 scale-95 opacity-80 hover:opacity-100 hover:scale-100"
+                    >
                         <div className="absolute top-0 right-0 p-4 opacity-10 text-slate-500">
                             <UsersIcon className="w-24 h-24" />
                         </div>
@@ -32,23 +50,29 @@ export function Comparison() {
                             <ListItem type="negative" text="Memory: Forgets Upselling" icon={<Zap className="w-4 h-4" />} />
                             <ListItem type="negative" text="Cost: Rising Annually" icon={<Wallet className="w-4 h-4" />} />
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* AI Card */}
-                    <div className="rounded-3xl p-8 border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent relative shadow-2xl shadow-primary/10 ring-1 ring-primary/20">
-                        <div className="absolute -top-4 right-8 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
-                            Recommended
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="rounded-3xl p-10 border border-primary/20 bg-white relative shadow-2xl shadow-primary/10 ring-1 ring-primary/20 scale-105 z-10"
+                    >
+                        <div className="absolute -top-4 right-8 bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg flex items-center gap-2">
+                            <Zap className="w-3 h-3 fill-current" /> Recommended
                         </div>
-                        <h3 className="text-xl font-bold mb-1 text-foreground">Eamom Voice AI</h3>
-                        <div className="text-3xl font-bold mb-8 text-primary">$1,200 <span className="text-sm font-normal text-muted-foreground">/ month</span></div>
+                        <h3 className="text-2xl font-bold mb-1 text-foreground">Eamom Voice AI</h3>
+                        <div className="text-4xl font-bold mb-8 text-primary">$1,200 <span className="text-sm font-normal text-muted-foreground">/ month</span></div>
 
-                        <ul className="space-y-4">
+                        <ul className="space-y-5">
                             <ListItem type="positive" text="Availability: 24/7/365" icon={<Clock className="w-4 h-4" />} />
                             <ListItem type="positive" text="Training: Instant Download" icon={<ShieldCheck className="w-4 h-4" />} />
                             <ListItem type="positive" text="Memory: Perfect Upselling" icon={<Zap className="w-4 h-4" />} />
                             <ListItem type="positive" text="Cost: Fixed & Lower" icon={<Wallet className="w-4 h-4" />} />
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
