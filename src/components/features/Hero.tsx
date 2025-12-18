@@ -2,9 +2,18 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, CheckCircle, Bot, Server, Play } from "lucide-react";
+import { Phone, CheckCircle, Bot, Server, Play, PhoneOff, Volume2 } from "lucide-react";
 
 export function Hero() {
+    const [time, setTime] = React.useState(0);
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setTime((prev) => (prev + 1) % 21); // 0-20 loop
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden bg-background">
             {/* Background Gradients (Light Theme) */}
@@ -84,15 +93,17 @@ export function Hero() {
                             className="flex flex-col items-center relative z-10"
                         >
                             <div className="text-xs font-bold text-slate-500 mb-4 uppercase tracking-widest text-center">1. Customer Calls</div>
-                            <div className="w-[180px] bg-slate-100 border-[4px] border-slate-200 rounded-[2.5rem] p-3 shadow-xl relative">
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-slate-300 rounded-b-lg z-20" />
+                            <div className="w-[180px] bg-slate-100 border border-slate-200 rounded-[2.5rem] p-1.5 shadow-xl relative">
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-slate-100 rounded-b-lg z-20" />
                                 <div className="h-[280px] bg-white rounded-[2rem] flex flex-col items-center pt-8 relative overflow-hidden border border-slate-100">
                                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold mb-2 border border-primary/20">TW</div>
                                     <div className="text-slate-900 text-sm font-medium">Tasty Wok</div>
-                                    <div className="text-primary/70 text-xs mt-1 animate-pulse">00:14</div>
+                                    <div className="text-primary/70 text-xs mt-1 font-mono">
+                                        00:{time.toString().padStart(2, '0')}
+                                    </div>
 
                                     {/* Outgoing Audio Waves */}
-                                    <div className="mt-8 flex gap-1 justify-center h-8 items-end">
+                                    <div className="mt-8 flex gap-1 justify-center h-8 items-end opacity-50">
                                         {[1, 3, 2, 4, 3].map((h, i) => (
                                             <motion.div
                                                 key={i}
@@ -103,14 +114,15 @@ export function Hero() {
                                         ))}
                                     </div>
 
-                                    {/* Moving Particle to AI (Visual only) */}
-                                    <motion.div
-                                        animate={{ y: [0, -20], opacity: [1, 0] }}
-                                        transition={{ duration: 1.5, repeat: Infinity }}
-                                        className="absolute bottom-10 w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center bg-primary/5"
-                                    >
-                                        <div className="w-2 h-2 bg-primary rounded-full" />
-                                    </motion.div>
+                                    {/* Call Controls */}
+                                    <div className="absolute bottom-6 w-full flex justify-center gap-4 px-4">
+                                        <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+                                            <Volume2 className="w-5 h-5" />
+                                        </div>
+                                        <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white shadow-lg shadow-red-200">
+                                            <PhoneOff className="w-5 h-5" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
