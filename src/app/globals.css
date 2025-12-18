@@ -23,36 +23,55 @@
 }
 
 :root {
-  /* Default to Dark Mode for this high-end landing page */
-  --background: #0a0a0a; /* Zinc 950 */
-  --foreground: #fafafa; /* Zinc 50 */
+  /* Light SaaS Theme adapted from iorderai2 */
   
-  --primary: #f97316; /* Orange 500 - Food & Warmth */
+  /* Backgrounds */
+  --background: #F7F9FC; /* Light Blue/Gray */
+  --foreground: #0F172A; /* Slate 900 */
+  
+  /* Primary: Teal #1E6C7E */
+  --primary: #1E6C7E;
   --primary-foreground: #ffffff;
   
-  --secondary: #27272a; /* Zinc 800 */
-  --secondary-foreground: #fafafa;
+  /* Secondary: Yellow/Gold #FFC000 */
+  --secondary: #FFC000;
+  --secondary-foreground: #0F172A; /* Dark text for contrast on yellow */
   
-  --muted: #27272a; /* Zinc 800 */
-  --muted-foreground: #a1a1aa; /* Zinc 400 */
+  /* Muted / Neutral */
+  --muted: #F1F5F9; /* Slate 100 */
+  --muted-foreground: #64748B; /* Slate 500 */
   
-  --accent: #27272a; /* Zinc 800 */
-  --accent-foreground: #fafafa;
+  /* Accent (often used for hovers or subtle highlights) */
+  --accent: #E2E8F0; /* Slate 200 */
+  --accent-foreground: #0F172A;
   
-  --destructive: #ef4444; /* Red 500 */
+  /* Destructive */
+  --destructive: #DC2626; /* Red 600 */
   --destructive-foreground: #fafafa;
   
-  --border: #27272a; /* Zinc 800 */
-  --input: #27272a; /* Zinc 800 */
-  --ring: #f97316; /* Orange 500 */
+  /* Borders & Inputs */
+  --border: #CBD5E1; /* Slate 300 - equivalent to rgba(15, 23, 42, 0.12) roughly */
+  --input: #CBD5E1;
+  --ring: #1E6C7E; /* Primary color ring */
   
   --radius: 0.5rem;
+  
+  /* Custom Gradients/Effects from target design */
+  --gradient-primary: linear-gradient(135deg, #1E6C7E 0%, #2D8CA4 55%, #FFC000 130%);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilities for the specific design style */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

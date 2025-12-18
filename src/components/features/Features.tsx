@@ -45,12 +45,12 @@ export function Features() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {features.map((feature, i) => (
-                        <div key={i} className="p-8 rounded-3xl border border-secondary bg-secondary/20 hover:bg-secondary/40 transition-colors">
+                        <div key={i} className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                             <div className={`w-14 h-14 rounded-2xl ${feature.bg} flex items-center justify-center mb-6`}>
                                 {feature.icon}
                             </div>
-                            <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
+                            <p className="text-slate-600 leading-relaxed">
                                 {feature.description}
                             </p>
                         </div>

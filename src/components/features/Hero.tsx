@@ -2,61 +2,68 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, CheckCircle, Bot, Server } from "lucide-react";
+import { Phone, CheckCircle, Bot, Server, Play } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
-            {/* Background Glows */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] pointer-events-none" />
+        <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden bg-background">
+            {/* Background Gradients (Light Theme) */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(30,108,126,0.15)_0%,transparent_55%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,192,0,0.10)_0%,transparent_50%)] pointer-events-none" />
+            
+            {/* Subtle Grid Pattern */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E6C7E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}
+            />
 
-            <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 {/* Left Content */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="space-y-8 text-center lg:text-left z-10"
+                    className="space-y-8 text-center lg:text-left"
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-secondary text-xs uppercase tracking-wider text-muted-foreground">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold uppercase tracking-wider text-primary">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         Live in 25,000+ Restaurants
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-foreground">
                         The AI Staff That <br />
-                        <span className="text-primary bg-clip-text">Never Misses a Call</span>
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1E6C7E] via-[#2D8CA4] to-[#FFC000]">
+                            Never Misses a Call
+                        </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light tracking-wide">
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
                         Stop losing orders to busy lines. Eamom answers every call, takes orders in English & Chinese, and sends them directly to your POS.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                        <button className="px-8 py-4 bg-primary text-primary-foreground text-lg font-bold rounded-lg hover:bg-orange-600 transition-all shadow-xl shadow-orange-500/25 w-full sm:w-auto">
+                        <button className="px-8 py-4 bg-primary text-white text-lg font-bold rounded-xl hover:bg-[#16515E] transition-all shadow-lg shadow-teal-900/10 hover:shadow-xl w-full sm:w-auto">
                             Calculate Your Savings
                         </button>
-                        <button className="px-8 py-4 bg-secondary text-secondary-foreground border border-border text-lg font-medium rounded-lg hover:bg-secondary/80 transition-colors w-full sm:w-auto flex items-center justify-center gap-2">
-                            <Phone className="w-5 h-5" />
+                        <button className="px-8 py-4 bg-white text-foreground border border-slate-200 text-lg font-medium rounded-xl hover:bg-slate-50 transition-colors w-full sm:w-auto flex items-center justify-center gap-2 shadow-sm">
+                            <Play className="w-5 h-5 fill-current opacity-80" />
                             Listen to Demo
                         </button>
                     </div>
 
-                    <div className="flex items-center gap-6 justify-center lg:justify-start text-sm text-muted-foreground pt-4">
+                    <div className="flex items-center gap-6 justify-center lg:justify-start text-sm text-slate-600 pt-4">
                         <div className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-primary" />
+                            <CheckCircle className="w-5 h-5 text-primary" />
                             <span>Saves $40k/year</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-primary" />
+                            <CheckCircle className="w-5 h-5 text-primary" />
                             <span>Bilingual (CN/EN)</span>
                         </div>
                     </div>
                 </motion.div>
 
                 {/* Right Visual (Interactive Flow) */}
-                <div className="relative z-10 w-full lg:h-[500px] flex flex-col justify-center">
+                <div className="relative z-10 w-full lg:h-[500px] flex flex-col justify-center perspective-1000">
 
                     {/* 3-Layer Flow Container */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center relative">
@@ -64,9 +71,9 @@ export function Hero() {
                         {/* Connecting Lines Layer (Behind) */}
                         <div className="absolute inset-0 pointer-events-none hidden md:block">
                             {/* Line 1: Phone -> AI */}
-                            <div className="absolute top-1/2 left-[25%] right-[55%] h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-primary/50 border-t border-dashed border-white/20" />
+                            <div className="absolute top-1/2 left-[25%] right-[55%] h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-primary/30 border-t border-dashed border-slate-300" />
                             {/* Line 2: AI -> POS */}
-                            <div className="absolute top-1/2 left-[55%] right-[25%] h-0.5 bg-gradient-to-r from-primary/50 via-primary/50 to-transparent border-t border-dashed border-white/20" />
+                            <div className="absolute top-1/2 left-[55%] right-[25%] h-0.5 bg-gradient-to-r from-primary/30 via-primary/30 to-transparent border-t border-dashed border-slate-300" />
                         </div>
 
                         {/* Layer 1: Customer Phone */}
@@ -76,11 +83,11 @@ export function Hero() {
                             transition={{ delay: 0.2 }}
                             className="flex flex-col items-center relative z-10"
                         >
-                            <div className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-widest text-center">1. Customer Calls</div>
-                            <div className="w-[180px] bg-black border-[4px] border-zinc-700/50 rounded-[2.5rem] p-3 shadow-2xl relative">
+                            <div className="text-xs font-bold text-slate-500 mb-4 uppercase tracking-widest text-center">1. Customer Calls</div>
+                            <div className="w-[180px] bg-gray-900 border-[4px] border-gray-800 rounded-[2.5rem] p-3 shadow-2xl relative">
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-black rounded-b-lg z-20" />
-                                <div className="h-[280px] bg-gradient-to-b from-zinc-800 to-zinc-900 rounded-[2rem] flex flex-col items-center pt-8 relative overflow-hidden">
-                                    <div className="w-12 h-12 rounded-full bg-zinc-700 flex items-center justify-center text-white font-bold mb-2">TW</div>
+                                <div className="h-[280px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2rem] flex flex-col items-center pt-8 relative overflow-hidden">
+                                    <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold mb-2 border border-gray-600">TW</div>
                                     <div className="text-white text-sm font-medium">Tasty Wok</div>
                                     <div className="text-green-400 text-xs mt-1 animate-pulse">00:14</div>
 
@@ -91,7 +98,7 @@ export function Hero() {
                                                 key={i}
                                                 animate={{ height: [4, h * 6, 4] }}
                                                 transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
-                                                className="w-1 bg-white rounded-full"
+                                                className="w-1 bg-white/90 rounded-full"
                                             />
                                         ))}
                                     </div>
@@ -100,7 +107,7 @@ export function Hero() {
                                     <motion.div
                                         animate={{ y: [0, -20], opacity: [1, 0] }}
                                         transition={{ duration: 1.5, repeat: Infinity }}
-                                        className="absolute bottom-10 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center bg-white/5"
+                                        className="absolute bottom-10 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center bg-white/10"
                                     >
                                         <div className="w-2 h-2 bg-white rounded-full" />
                                     </motion.div>
@@ -119,10 +126,10 @@ export function Hero() {
 
                             {/* The Brain Node */}
                             <div className="relative w-32 h-32 flex items-center justify-center">
-                                <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
-                                <div className="absolute inset-2 bg-background border border-primary/50 rounded-full shadow-[0_0_30px_rgba(249,115,22,0.3)] flex flex-col items-center justify-center text-primary z-10">
-                                    <Bot className="w-10 h-10 mb-1" />
-                                    <span className="text-[10px] font-bold tracking-tighter">EAMOM CORE</span>
+                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl animate-pulse" />
+                                <div className="absolute inset-2 bg-white border border-primary/20 rounded-full shadow-[0_8px_30px_rgba(30,108,126,0.15)] flex flex-col items-center justify-center text-primary z-10">
+                                    <Bot className="w-10 h-10 mb-1 text-primary" />
+                                    <span className="text-[10px] font-bold tracking-tighter text-primary">EAMOM CORE</span>
                                 </div>
 
                                 {/* Orbiting Data Particles */}
@@ -139,9 +146,9 @@ export function Hero() {
                             </div>
 
                             {/* Processing Badge */}
-                            <div className="mt-4 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full flex items-center gap-2">
+                            <div className="mt-4 bg-white border border-slate-200 shadow-sm px-3 py-1.5 rounded-full flex items-center gap-2">
                                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                                <span className="text-[10px] text-zinc-400">Transcribing...</span>
+                                <span className="text-[10px] text-slate-500 font-medium">Transcribing...</span>
                             </div>
                         </motion.div>
 
@@ -152,17 +159,17 @@ export function Hero() {
                             transition={{ delay: 0.6 }}
                             className="flex flex-col items-center relative z-10"
                         >
-                            <div className="text-xs font-bold text-muted-foreground mb-4 uppercase tracking-widest text-center">3. Kitchen Gets Order</div>
-                            <div className="w-[220px] bg-zinc-100 dark:bg-zinc-900 border border-border rounded-xl shadow-xl p-2 relative group">
+                            <div className="text-xs font-bold text-slate-500 mb-4 uppercase tracking-widest text-center">3. Kitchen Gets Order</div>
+                            <div className="w-[220px] bg-white border border-slate-200 rounded-xl shadow-xl p-2 relative group">
                                 {/* POS Header */}
-                                <div className="h-6 bg-zinc-200 dark:bg-zinc-800 rounded-t-md mb-2 flex items-center px-2">
-                                    <div className="w-2 h-2 bg-zinc-400 rounded-full" />
+                                <div className="h-6 bg-slate-100 rounded-t-md mb-2 flex items-center px-2 border-b border-slate-100">
+                                    <div className="w-2 h-2 bg-slate-300 rounded-full" />
                                 </div>
 
                                 {/* Ticket */}
-                                <div className="bg-white dark:bg-black p-4 rounded border border-border/50 min-h-[200px] flex flex-col">
-                                    <div className="flex justify-between border-b border-dashed border-gray-200 pb-2 mb-2">
-                                        <span className="text-[10px] font-bold text-gray-400">TICKET #1402</span>
+                                <div className="bg-white p-4 rounded border border-slate-100 min-h-[200px] flex flex-col">
+                                    <div className="flex justify-between border-b border-dashed border-slate-200 pb-2 mb-2">
+                                        <span className="text-[10px] font-bold text-slate-400">TICKET #1402</span>
                                         <Server className="w-3 h-3 text-green-500" />
                                     </div>
 
@@ -173,15 +180,15 @@ export function Hero() {
                                         transition={{ delay: 1.5, repeat: Infinity, repeatDelay: 5 }}
                                         className="mb-2"
                                     >
-                                        <div className="text-sm font-bold">General Tso Chkn</div>
-                                        <div className="text-[10px] text-gray-500 flex justify-between">
+                                        <div className="text-sm font-bold text-slate-800">General Tso Chkn</div>
+                                        <div className="text-[10px] text-slate-500 flex justify-between">
                                             <span>Regular • Spicy</span>
                                             <span>$14.95</span>
                                         </div>
                                     </motion.div>
 
-                                    <div className="mt-auto pt-2 border-t border-gray-100 flex justify-between items-end">
-                                        <span className="text-[10px] font-bold">TOTAL</span>
+                                    <div className="mt-auto pt-2 border-t border-slate-100 flex justify-between items-end">
+                                        <span className="text-[10px] font-bold text-slate-500">TOTAL</span>
                                         <span className="text-lg font-bold text-primary">$14.95</span>
                                     </div>
                                 </div>
@@ -191,7 +198,7 @@ export function Hero() {
                                     initial={{ scaleY: 0 }}
                                     animate={{ scaleY: 1 }}
                                     transition={{ delay: 2, duration: 0.5, repeat: Infinity, repeatDelay: 5 }}
-                                    className="absolute -bottom-4 left-4 right-4 h-8 bg-white/80 border border-gray-200 -z-10 origin-top"
+                                    className="absolute -bottom-4 left-4 right-4 h-8 bg-white/90 border border-slate-200 -z-10 origin-top shadow-sm"
                                 />
                             </div>
                         </motion.div>

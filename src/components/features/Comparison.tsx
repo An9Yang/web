@@ -19,12 +19,12 @@ export function Comparison() {
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {/* Human Card */}
-                    <div className="rounded-3xl p-8 border border-border bg-secondary/20 relative opacity-80 backdrop-blur-sm grayscale-[0.5] hover:grayscale-0 transition-all duration-500">
-                        <div className="absolute top-0 right-0 p-4 opacity-10">
+                    <div className="rounded-3xl p-8 border border-slate-200 bg-slate-50 relative hover:shadow-lg transition-all duration-500">
+                        <div className="absolute top-0 right-0 p-4 opacity-10 text-slate-500">
                             <UsersIcon className="w-24 h-24" />
                         </div>
-                        <h3 className="text-xl font-bold mb-1 text-muted-foreground">Human Staff</h3>
-                        <div className="text-3xl font-bold mb-8 opacity-50">$3,625 <span className="text-sm font-normal text-muted-foreground">/ month</span></div>
+                        <h3 className="text-xl font-bold mb-1 text-slate-500">Human Staff</h3>
+                        <div className="text-3xl font-bold mb-8 text-slate-400 opacity-80">$3,625 <span className="text-sm font-normal text-slate-500">/ month</span></div>
 
                         <ul className="space-y-4">
                             <ListItem type="negative" text="Availability: 8-10 Hours/Day" icon={<Clock className="w-4 h-4" />} />

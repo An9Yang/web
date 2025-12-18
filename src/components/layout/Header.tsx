@@ -53,7 +53,7 @@ export function Header() {
                     ))}
                     <Link
                         href="#contact"
-                        className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"
+                        className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full hover:bg-[#16515E] transition-all shadow-lg shadow-teal-900/10"
                     >
                         Book a Demo
                     </Link>
@@ -90,7 +90,7 @@ export function Header() {
                             ))}
                             <Link
                                 href="#contact"
-                                className="w-full text-center px-5 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+                                className="w-full text-center px-5 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-[#16515E] transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 Book a Demo
