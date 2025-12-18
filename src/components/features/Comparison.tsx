@@ -61,7 +61,7 @@ function ListItem({ type, text, icon }: { type: "positive" | "negative", text: s
         <li className="flex items-center gap-3">
             <div className={cn(
                 "w-6 h-6 rounded-full flex items-center justify-center shrink-0",
-                isPos ? "bg-green-500/10 text-green-500" : "bg-red-500/10 text-red-500"
+                isPos ? "bg-primary/10 text-primary" : "bg-red-500/10 text-red-500"
             )}>
                 {isPos ? <Check className="w-3.5 h-3.5" /> : <X className="w-3.5 h-3.5" />}
             </div>

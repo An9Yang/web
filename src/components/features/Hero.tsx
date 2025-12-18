@@ -10,10 +10,10 @@ export function Hero() {
             {/* Background Gradients (Light Theme) */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(30,108,126,0.15)_0%,transparent_55%)] pointer-events-none" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,192,0,0.10)_0%,transparent_50%)] pointer-events-none" />
-            
+
             {/* Subtle Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E6C7E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}
+                style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E6C7E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}
             />
 
             <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -24,14 +24,14 @@ export function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="space-y-8 text-center lg:text-left"
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold uppercase tracking-wider text-primary">
-                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/20 text-xs font-semibold uppercase tracking-wider text-primary">
+                        <span className="w-2 h-2 rounded-full bg-primary/80 animate-pulse" />
                         Live in 25,000+ Restaurants
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-foreground">
                         The AI Staff That <br />
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1E6C7E] via-[#2D8CA4] to-[#FFC000]">
+                        <span className="text-primary">
                             Never Misses a Call
                         </span>
                     </h1>
@@ -71,9 +71,9 @@ export function Hero() {
                         {/* Connecting Lines Layer (Behind) */}
                         <div className="absolute inset-0 pointer-events-none hidden md:block">
                             {/* Line 1: Phone -> AI */}
-                            <div className="absolute top-1/2 left-[25%] right-[55%] h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-primary/30 border-t border-dashed border-slate-300" />
+                            <div className="absolute top-1/2 left-[25%] right-[55%] h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-primary/20 border-t border-dashed border-slate-300" />
                             {/* Line 2: AI -> POS */}
-                            <div className="absolute top-1/2 left-[55%] right-[25%] h-0.5 bg-gradient-to-r from-primary/30 via-primary/30 to-transparent border-t border-dashed border-slate-300" />
+                            <div className="absolute top-1/2 left-[55%] right-[25%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/20 to-transparent border-t border-dashed border-slate-300" />
                         </div>
 
                         {/* Layer 1: Customer Phone */}
@@ -84,12 +84,12 @@ export function Hero() {
                             className="flex flex-col items-center relative z-10"
                         >
                             <div className="text-xs font-bold text-slate-500 mb-4 uppercase tracking-widest text-center">1. Customer Calls</div>
-                            <div className="w-[180px] bg-gray-900 border-[4px] border-gray-800 rounded-[2.5rem] p-3 shadow-2xl relative">
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-black rounded-b-lg z-20" />
-                                <div className="h-[280px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2rem] flex flex-col items-center pt-8 relative overflow-hidden">
-                                    <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold mb-2 border border-gray-600">TW</div>
-                                    <div className="text-white text-sm font-medium">Tasty Wok</div>
-                                    <div className="text-green-400 text-xs mt-1 animate-pulse">00:14</div>
+                            <div className="w-[180px] bg-slate-100 border-[4px] border-slate-200 rounded-[2.5rem] p-3 shadow-xl relative">
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-slate-300 rounded-b-lg z-20" />
+                                <div className="h-[280px] bg-white rounded-[2rem] flex flex-col items-center pt-8 relative overflow-hidden border border-slate-100">
+                                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold mb-2 border border-primary/20">TW</div>
+                                    <div className="text-slate-900 text-sm font-medium">Tasty Wok</div>
+                                    <div className="text-primary/70 text-xs mt-1 animate-pulse">00:14</div>
 
                                     {/* Outgoing Audio Waves */}
                                     <div className="mt-8 flex gap-1 justify-center h-8 items-end">
@@ -98,7 +98,7 @@ export function Hero() {
                                                 key={i}
                                                 animate={{ height: [4, h * 6, 4] }}
                                                 transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}
-                                                className="w-1 bg-white/90 rounded-full"
+                                                className="w-1 bg-primary/60 rounded-full"
                                             />
                                         ))}
                                     </div>
@@ -107,9 +107,9 @@ export function Hero() {
                                     <motion.div
                                         animate={{ y: [0, -20], opacity: [1, 0] }}
                                         transition={{ duration: 1.5, repeat: Infinity }}
-                                        className="absolute bottom-10 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center bg-white/10"
+                                        className="absolute bottom-10 w-8 h-8 rounded-full border border-primary/20 flex items-center justify-center bg-primary/5"
                                     >
-                                        <div className="w-2 h-2 bg-white rounded-full" />
+                                        <div className="w-2 h-2 bg-primary rounded-full" />
                                     </motion.div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@ export function Hero() {
 
                             {/* The Brain Node */}
                             <div className="relative w-32 h-32 flex items-center justify-center">
-                                <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl animate-pulse" />
+                                <div className="absolute inset-0 bg-primary/5 rounded-full blur-xl animate-pulse" />
                                 <div className="absolute inset-2 bg-white border border-primary/20 rounded-full shadow-[0_8px_30px_rgba(30,108,126,0.15)] flex flex-col items-center justify-center text-primary z-10">
                                     <Bot className="w-10 h-10 mb-1 text-primary" />
                                     <span className="text-[10px] font-bold tracking-tighter text-primary">EAMOM CORE</span>
@@ -147,7 +147,7 @@ export function Hero() {
 
                             {/* Processing Badge */}
                             <div className="mt-4 bg-white border border-slate-200 shadow-sm px-3 py-1.5 rounded-full flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
                                 <span className="text-[10px] text-slate-500 font-medium">Transcribing...</span>
                             </div>
                         </motion.div>

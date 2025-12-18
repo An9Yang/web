@@ -16,7 +16,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -24,40 +24,47 @@
 
 :root {
   /* Light SaaS Theme adapted from iorderai2 */
-  
+
   /* Backgrounds */
-  --background: #F7F9FC; /* Light Blue/Gray */
-  --foreground: #0F172A; /* Slate 900 */
-  
-  /* Primary: Teal #1E6C7E */
+  --background: #F8FAFC;
+  /* Slate 50 - Very light, airy */
+  --foreground: #0F172A;
+  /* Slate 900 */
+
+  /* Primary: Teal #1E6C7E - The core brand color */
   --primary: #1E6C7E;
   --primary-foreground: #ffffff;
-  
-  /* Secondary: Yellow/Gold #FFC000 */
-  --secondary: #FFC000;
-  --secondary-foreground: #0F172A; /* Dark text for contrast on yellow */
-  
+
+  /* Secondary: Soft Gold #E6B000 - Used sparingly for warmth */
+  --secondary: #E6B000;
+  --secondary-foreground: #ffffff;
+
   /* Muted / Neutral */
-  --muted: #F1F5F9; /* Slate 100 */
-  --muted-foreground: #64748B; /* Slate 500 */
-  
-  /* Accent (often used for hovers or subtle highlights) */
-  --accent: #E2E8F0; /* Slate 200 */
+  --muted: #F1F5F9;
+  /* Slate 100 */
+  --muted-foreground: #64748B;
+  /* Slate 500 */
+
+  /* Accent */
+  --accent: #E2E8F0;
+  /* Slate 200 */
   --accent-foreground: #0F172A;
-  
-  /* Destructive */
-  --destructive: #DC2626; /* Red 600 */
+
+  /* Destructive - Keep for errors but use sparingly */
+  --destructive: #DC2626;
   --destructive-foreground: #fafafa;
-  
+
   /* Borders & Inputs */
-  --border: #CBD5E1; /* Slate 300 - equivalent to rgba(15, 23, 42, 0.12) roughly */
+  --border: #CBD5E1;
+  /* Slate 300 */
   --input: #CBD5E1;
-  --ring: #1E6C7E; /* Primary color ring */
-  
+  --ring: #1E6C7E;
+
   --radius: 0.5rem;
-  
-  /* Custom Gradients/Effects from target design */
-  --gradient-primary: linear-gradient(135deg, #1E6C7E 0%, #2D8CA4 55%, #FFC000 130%);
+
+  /* Custom Gradients - Refined to be "Airy" */
+  /* A more subtle Cyan -> Soft Turquoise -> Gold hint */
+  --gradient-primary: linear-gradient(135deg, #1E6C7E 0%, #2D8CA4 50%, #D4A017 100%);
 }
 
 body {

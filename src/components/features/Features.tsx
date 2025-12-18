@@ -7,26 +7,28 @@ const features = [
     {
         title: "Bilingual Genius",
         description: "Fluent in English and Mandarin (plus Cantonese accents). Handles mixed-language orders naturally.",
-        icon: <Globe2 className="w-8 h-8 text-blue-500" />,
-        bg: "bg-blue-500/10",
+        icon: <Globe2 className="w-8 h-8 text-primary" />,
+        bg: "bg-primary/10",
     },
     {
         title: "Smart Upselling",
         description: "Automatically asks 'Want a drink with that?' or 'Spicy or mild?', boosting average order value.",
-        icon: <MessageSquare className="w-8 h-8 text-purple-500" />,
-        bg: "bg-purple-500/10",
+        // Using secondary (Gold) just for this one to highlight 'Value' but keep it cohesive, or stick to primary?
+        // User wants LESS colors. Let's stick to primary for clean look.
+        icon: <MessageSquare className="w-8 h-8 text-primary" />,
+        bg: "bg-primary/10",
     },
     {
         title: "Direct POS Integration",
         description: "Orders go straight to your kitchen printer. Compatible with Tiger, RestPOS, and more.",
-        icon: <Server className="w-8 h-8 text-orange-500" />,
-        bg: "bg-orange-500/10",
+        icon: <Server className="w-8 h-8 text-primary" />,
+        bg: "bg-primary/10",
     },
     {
         title: "Never Busy",
         description: "Can handle multiple calls at once during Friday night rush. Zero missed customers.",
-        icon: <Clock className="w-8 h-8 text-green-500" />,
-        bg: "bg-green-500/10",
+        icon: <Clock className="w-8 h-8 text-primary" />,
+        bg: "bg-primary/10",
     },
 ];
 
